@@ -1,0 +1,14 @@
+.index{
+  &__links{
+    margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 70px;
+    }
+  }
+
+  &__video{
+    @include sm-block{
+      margin-top: 70px;
+    }
+  }
+}

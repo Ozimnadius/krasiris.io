@@ -1,0 +1,171 @@
+.useful {
+  padding: 60px 0;
+  background-color: #f3f3f3;
+  @include sm-block {
+    padding: 35px 0;
+  }
+
+  &__row {
+    margin-left: -35px;
+    margin-right: -35px;
+    align-items: flex-end;
+  }
+
+  &__left, &__right {
+    width: calc(50% - 70px);
+    margin-left: 35px;
+    margin-right: 35px;
+    @include md-block {
+      width: calc(100% - 70px);
+    }
+  }
+
+  &__left {
+    @include md-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.news {
+  &__title {
+    color: #ea9e36;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    @include sm-block {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__sub {
+    opacity: 0.8;
+    color: #000000;
+    font-size: 26px;
+    margin-bottom: 40px;
+    @include sm-block {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    width: 238px;
+    height: 44px;
+    font-size: 18px;
+    text-transform: none;
+    margin-left: auto;
+    @include sm-block{
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.new {
+  display: flex;
+  margin-bottom: 20px;
+  @include sm-block {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__left {
+    min-width: 180px;
+    margin-right: 20px;
+    @include sm-block {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    @include sm-block {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: #ea9e36;
+    font-size: 22px;
+    line-height: lh(22, 27.87);
+    margin-bottom: 10px;
+    @include sm-block {
+      font-size: 18px;
+    }
+  }
+
+  &__txt {
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    align-self: flex-end;
+    margin-top: auto;
+    /* Style for "Подробнее." */
+    color: #ea9e36;
+  }
+}
+
+.questions {
+  &__title {
+    color: #ea9e36;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    text-align: center;
+    @include sm-block{
+      font-size: 18px;
+      max-width: 174px;
+      margin: 0 auto;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    @include tr;
+
+    &:hover {
+      color: #ea9e36;
+    }
+  }
+
+  &__link {
+    width: 238px;
+    height: 44px;
+    text-transform: none;
+    font-size: 18px;
+    margin-left: auto;
+    @include sm-block{
+      margin: 0 auto;
+    }
+  }
+}

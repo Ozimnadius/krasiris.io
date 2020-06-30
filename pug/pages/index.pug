@@ -4,5 +4,281 @@ block variables
     - var title = 'Главная'
 
 block content
-    h1 Страничка "Главная"
-        +icon('001-twitter', 'svg')
+    main.index
+        section.index__banner
+            .banner
+                .swiper-container.banner__swiper
+                    .swiper-wrapper
+                        each i,x in ['Центр коррекции зрения','Глазная клиника Ирис','Центр офтальмологии','Глазной центр ИРИС']
+                            .swiper-slide.banner__slide
+                                +image('images/content/banner/'+(x+1)+'.jpg','banner__img')
+                                h2.banner__title= i
+                    .banner__pag.swiper-pagination
+                .banner__bottom
+                    a(href='/').banner__link.btn Актуально
+                    .banner__btns
+                        a(href='tel:+7(391)200-80-30').banner__tel.btn
+                            .banner__tel-content
+                                .banner__tel-title регистратура:
+                                .banner__tel-tel
+                                    .fa.fa-phone
+                                    | +7 (391) 200-80-30
+                        a(href='#').btn.banner__call заказать звонок
+        section.index__about.about
+            .container
+                .row
+                    .about__left
+                        h2.title
+                            | СОВРЕМЕННЫЕ ТЕХНОЛОГИИ/
+                            br
+                            | ГАРАНТИЯ КАЧЕСТВА / ТОП-ЦЕНТР
+                        .about__content.content
+                            p Международный офтальмологический центр «Ирис» - современнейший глазной центр лазерной коррекции зрения и катарактальной хирургии в мире. Это команда профессионалов, с которой вы знакомы 20 лет.
+                            p Мы внедрили в Красноярске большинство современных технологий лечения глаз. Во всем мире есть только несколько центров, которые работают на столь высоком уровне и с таким количеством пациентов.
+                            p Мы имеем самый быстрый эксимерный лазер в мире - WaveLight® EX500 и проводим самое большое количество операций в Красноярске. В области лечения катаракты и имплантации современных интраокулярных линз-премиум класса мы являемся ведущим центром России
+                            p Знания и опыт - наши преимущества, лечиться у профессионалов - ваше преимущество.
+                            p Доверяйте свое зрение только профессионалам.
+
+                    .about__right
+                        each i in [1,2]
+                            .about__img
+                                +image('images/content/about/'+i+'.jpg','about__img-img')
+        section.index__lasik.lasik
+            .lasik__top
+                .lasik__image
+                    +image('images/content/lasik/img.jpg','lasik__image-img')
+            .lasik__bottom
+                .container
+                    .row
+                        .lasik__left.order-m1
+                            +image('images/content/lasik/1.jpg','lasik__img')
+                        .lasik__right
+                            h2.title.lasik__title Лазерная коррекция зрения или LASIK
+                            .content
+                                p Мы собрали уникальную в своем роде команду из высококвалифицированных врачей и инженеров, оснастили наш центр современнейшим оборудованием и технологиями, в совокупности практически не имеющими равных в России.
+                                p Во всем мире есть только несколько центров, работающих на столь высоком уровне и с таким количеством пациентов.
+                                p Мы единственные в Красноярске располагаем самым быстрым эксимерным лазером в мире - WaveLight® EX500.
+                                p 55 000 операций по коррекции зрения - наш опыт один из самых больших в мире. Проведение 4500 операций в год ставит наш центр в ряд самых востребованных в мире.
+                                p Подражать можно, повторить невозможно.
+        section.index__lasik.lasik
+            .lasik__top
+                .lasik__image
+                    +image('images/content/lens/img.jpg','lasik__image-img')
+            .lasik__bottom
+                .container
+                    .row
+                        .lasik__left
+                            h2.title ПРЕМИУМ-ЛИНЗЫ
+                            .content
+                               p Мы внедрили в Красноярске технологию амбулаторной хирургии катаракты и имеем самый большой опыт.
+                               p Кроме того, мы первыми начали имплантировать интраокулярные линзы премиум-класса, позволяющие одновременно с катарактой избавиться от аномалий рефракции, а также обрести полную свободу от очков на любом расстоянии и в любом возрасте.
+                               p Наш опыт имплантации линз премиум класса является одним из самых больших в мире.
+                        .lasik__right
+                            +image('images/content/lens/1.jpg','lasik__img')
+        section.index__lasik.lasik
+            .lasik__top
+                .lasik__image
+                    +image('images/content/exp/img.jpg','lasik__image-img')
+            .lasik__bottom
+                .container
+                    .row
+                        .lasik__left.order-m1
+                            +image('images/content/exp/1.jpg','lasik__img')
+                        .lasik__right
+                            h2.title.lasik__title ОПЫТ / ПРЕИМУЩЕСТВО
+                            .content
+                                p Центр «Ирис» является крупнейшим хирургическим центром России, здесь проведено более 75 000 успешных операций. В число наших пациентов входят известные менеджеры, политики, артисты и спортсмены.
+                                p Наши преимущества в оснащении совершенным оборудованием и наличии уникальной команды хирургов, имеющих совокупный опыт более 120 000 микрохирургических операций. Такой опыт является одним из самых больших в России и в мире.
+                                p Обширные связи с ведущими офтальмологическими компаниями мира обеспечивают нам постоянный доступ к новейшим технологиям и гарантируют инновационное преимущество перед другими офтальмологическими центрами.
+                                p Центр «Ирис» многократно награждался. Среди сотрудников Центра «Ирис» есть Заслуженный врач России, многие специалисты имеют государственные медали и награды.
+        section.index__lasik.lasik
+            .lasik__top
+                .lasik__image
+                    +image('images/content/luck/img.jpg','lasik__image-img')
+            .lasik__bottom
+                .container
+                    .row
+                        .lasik__left.order-m1
+                            +image('images/content/luck/1.jpg','lasik__img')
+                        .lasik__right
+                            h2.title.lasik__title УСПЕХ / АЛЕКСАНДР ПОХАБОВ
+                            .content
+                                p Александр Похабов один из выдающихся офтальмохирургов современности.
+                                p Специалист международного уровня. Имеет тридцатилетний опыт работы в офтальмологии. Открывал Иркутский филиал микрохирургии глаза им. С.Н. Федорова. Пять раз приглашался для работы правительством Китая.
+                                p Одним из первых в России внедрил факоэмульсификацию катаракты. Основатель многих технологий лечения глазных заболеваний. В общей сложности офтальмологический опыт работы составляет более 42000 операций. В 2014 году награжден золотой медалью "За трудовые заслуги".
+                                p Про таких говорят: «Хирург от Бога».
+        section.video.index__video
+            .container
+                h2.video__title Видеоотзывы наших пациентов:
+                .video__row.row
+                    each i,x in ['О специалистах','О коррекции зрения','О витреолизисе','О катаракте']
+                        a(href='https://www.youtube.com/watch?v=_sI_Ps7JSEk' data-fancybox).video__item
+                            span.video__img
+                                +image('images/content/video/'+(x+1)+'.jpg','video__img-img')
+                            span.video__name= i
+                a(href='/').video__link.btn Познакомиться со всеми отзывами
+        section.index__revs.revs
+            h2.revs__title
+                | отзывы
+                br
+                span.revs__title_b наших пациентов
+            .revs__slider
+                .swiper-container.revs__swiper
+                    .swiper-wrapper
+                        each i,x in revs
+                            .swiper-slide.revs__slide
+                                .rev
+                                    .rev__left
+                                        +image('images/content/revs/'+(x+1)+'.jpg','rev__img')
+                                    .rev__right
+                                        .content
+                                            each j in i
+                                                p!=j
+                .revs__nav
+                    a(href='#').revs__arr.revs__prev
+                        +icon('arr-l','revs__arr-svg')
+                    .revs__pag
+                    a(href='#').revs__arr.revs__next
+                        +icon('arr-r','revs__arr-svg')
+        section.index__links.links
+            .container
+                h2.links__title Мы знаем о зрении больше, подробнее:
+                .row
+                    each i in links
+                        a(href='/').links__item.btn!= i
+        section.index__servs.servs
+            .container
+                .servs__top
+                    h2.servs__title У вас есть проблема со зрением?
+                    .servs__sub Мы знаем как ее решить...
+                .servs__row.row
+                    each i in servs
+                        .servs__item
+                            .serv
+                                .serv__img
+                                    +image('images/content/servs/img.jpg','serv__img-img')
+                                .serv__content
+                                    .serv__title= i.title
+                                    .serv__sub= i.sub
+                                a(href='#').serv__btn.btn!= i.btn
+        section.index__useful.useful
+            .container
+                .row.useful__row
+                    .useful__left
+                        .news
+                            h2.news__title Мы поможем вам сохранить зрение
+                            .news__sub Полезная инфомрация...
+                            .news__list
+                                a(href='/').new
+                                    span.new__left
+                                        +image('images/content/news/1.jpg','new__img')
+                                    span.new__right
+                                        span.new__title Учёные распечатали роговицу на 3D-принтере
+                                        span.new__txt По данным Всемирной организации здравоохранения, около 10 миллионам людей в мире требуется пересадка роговицы, чтобы...
+                                        span.new__link Подробнее...
+                                a(href='/').new
+                                    span.new__left
+                                        +image('images/content/news/2.jpg','new__img')
+                                    span.new__right
+                                        span.new__title Исследователи нашли проблемные клетки, из-за которых появляется макулодистрофия...
+                                        span.new__txt Генетические исследования позволили обнаружить почти три десятка генов, ответственных за развитие заболевания. Однако до настоящего момента не было
+                                        span.new__link Подробнее...
+
+                            a(href='/').btn.news__link Все полезные советы...
+                    .useful__right
+                        .questions
+                            h2.questions__title Самые актуальные вопросы о зрении
+                            .questions__list
+                                each i in questions
+                                    a(href='/').questions__item= i
+                            a(href='/').btn.questions__link Все вопросы  и ответы...
+        section.index__rates.rates
+            .container
+                h2.rates__title Лучшая клиника Красноярска по мнению независимых агентств
+                .rates__sub Центр “Ирис”, качество проверенное временем. 21 год мы с вами, чтобы вы могли видеть.
+                .rates__list
+                    .rates__col
+                        .rates__name Независимые рейтинги
+                    .rates__col
+                        a(href='/').rate
+                            span.rate__img
+                                +image('images/content/rates/1.png','rate__img-img')
+                            span.rate__title Рейтинг
+                            span.rate__rate 4,7 из 5
+                    .rates__col
+                        a(href='/').rate
+                            span.rate__img
+                                +image('images/content/rates/2.png','rate__img-img')
+                            span.rate__title Рейтинг
+                            span.rate__stars
+                                +icon('star','rate__star rate__star_active')
+                                +icon('star','rate__star rate__star_active')
+                                +icon('star','rate__star rate__star_active')
+                                +icon('star','rate__star rate__star_active')
+                                +icon('star','rate__star rate__star')
+                            span.rate__sub 1 место из 6 в Краснорске
+                            span.rate__link 31 отзыв
+                    .rates__col
+                        a(href='/').rate
+                            span.rate__img
+                                +image('images/content/rates/3.png','rate__img-img')
+                            span.rate__title Рейтинг
+                            span.rate__rate 4,9 из 5
+                    .rates__col
+                        a(href='/').rate
+                            span.rate__img
+                                +image('images/content/rates/4.png','rate__img-img')
+                            span.rate__title Рейтинг
+                            span.rate__rate 5 из 5
+                    .rates__col
+                        a(href='/').rate
+                            span.rate__img
+                                +image('images/content/rates/5.png','rate__img-img')
+                            span.rate__title Рейтинг
+                            span.rate__rate 4,8 из 5
+                .rates__bottom
+                    .rates__item
+                        .rates__txt Оценка центра “Ирис” пациентами:
+                        .rates__val 4.9/5 (499 оценок)
+                    .rates__item
+                        .rates__txt Оцените нашу работу:
+                        .rates__stars
+                            +icon('star','rates__star rates__star_active')
+                            +icon('star','rates__star rates__star_active')
+                            +icon('star','rates__star rates__star_active')
+                            +icon('star','rates__star rates__star_active')
+                            +icon('star','rates__star rates__star')
+                .rates__title Доверяйте свое зрение только профессионалам
+        section.index__feed.feed
+            .container
+                form.row.feed__form
+                    .feed__left
+                        +image('images/content/feed/img.jpg','feed__img')
+                    .feed__right
+                        h2.feed__title Запись на прием
+                        .row
+                            .feed__col
+                                .feed__fields
+                                    .feed__field
+                                        input(type='text' name='name' placeholder='Имя' required=true).input
+                                    .feed__field
+                                        input(type='email' name='email' placeholder='E-mail' required=true).input
+                                    .feed__field
+                                        input(type='tel' name='tel' placeholder='Телефон' required=true).input
+                            .feed__col
+                                .feed__fields
+                                    .feed__field
+                                        textarea(name='comment' placeholder='Ваш вопрос').input.input_area
+                                    .feed__field
+                                        label.accept.feed__accept
+                                            input(type='checkbox' name='accept' checked=true).accept__input
+                                            span.accept__fake
+                                                span.accept__check
+                                                    +icon('checked','accept__check-svg')
+                                                span.accept__txt Даю согласние на обработку персональных данных
+                                    .feed__field
+                                        button(type='submit').btn.feed__submit Записаться на прием
+
+
+
+

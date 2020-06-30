@@ -1,3 +1,225 @@
 .footer {
+  padding: 40px 0;
 
+  &__top {
+    margin-bottom: 60px;
+  }
+
+  &__left {
+    @include col;
+    @include size(6);
+    @include shift-right(2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 70px;
+    }
+  }
+
+  &__right {
+    @include col;
+    @include size(16);
+    @include size-sm(24);
+  }
+
+  &__logo {
+    max-width: 92px;
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    color: #333333;
+    font-size: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__addr {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+    fill: #333333;
+    @include tr;
+
+    &:hover {
+      fill: #dd9f4c;
+      color: #dd9f4c;
+    }
+
+    &-svg {
+      width: 9px;
+      height: 12px;
+      margin-right: 7px;
+    }
+
+    &-txt {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  &__map {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+    @include tr;
+
+    &:hover {
+      color: #dd9f4c;
+    }
+  }
+
+  &__license {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    @include sm-block{
+      width: 100%;
+        justify-content: space-between;
+      padding: 0 5px;
+    }
+  }
+
+  &__socs {
+    margin-right: 60px;
+    @include sm-block{
+      margin-right: 0;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  &__copy {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+
+}
+
+.fmenu {
+  &__col {
+    @include col;
+    @include size(8);
+    display: flex;
+    flex-direction: column;
+    @include size-sm(24);
+    @include sm-block{
+        align-items: center;
+      margin-bottom: 65px;
+      text-align: center;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    display: block;
+    font-weight: 300;
+    line-height: lh(16, 28.59);
+    @include tr;
+
+    &:hover {
+      color: #dd9f4c;
+    }
+  }
+
+  &__contacts{
+    @include sm-block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 2px;
+    fill: #000;
+    @include tr;
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+
+    &-svg {
+      margin-right: 12px;
+
+      &_tel {
+        width: 17px;
+        height: 15px;
+      }
+
+      &_mail {
+        width: 18px;
+        height: 12px;
+      }
+
+      &_clock {
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    &-txt {
+      line-height: lh(16, 28.59);
+      font-weight: 300;
+    }
+
+  }
+
+  a.fmenu__contact {
+    &:hover {
+      fill: #dd9f4c;
+      color: #dd9f4c;
+    }
+  }
+}
+
+.fsocs {
+  &__item {
+    margin-right: 20px;
+    @include tr;
+
+    &:hover{
+      fill:#dd9f4c;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
