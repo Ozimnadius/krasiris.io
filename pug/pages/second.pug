@@ -1,0 +1,42 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    .second
+        .second__banner
+            .sbanner.banner
+                .sbanner__top
+                    +image('images/content/second/img.jpg','sbanner__img')
+                +bannetBottom(true)
+        .second__row.row
+            aside.second__left
+                nav.snav
+                    each i in snav
+                        a(href='/' class=i.cls).snav__item= i.title
+
+            main.second__right
+                .second__desc
+                    h2.second__title Лазерная коррекция зрения акция
+                    .second__content.second__top
+                        h3 Вы и ваши глаза достойны лучшего
+                        p
+                            b Восстановите свое зрение и ощутите новое качество жизни
+                        p Только у нас! При проведении лазерной коррекции зрения в нашем Центре вы получаете 4 бесплатных бонуса, которые вам необходимы и несомненно понравятся.
+                    .second__bonuses
+                        .bonuses
+                            each i in bonuses
+                                .bonuses__item.bonus
+                                    .bonus__left
+                                        .bonus__title.bonus__title_m= i.title
+                                        +image(i.src,'bonus__img')
+                                    .bonus__right
+                                        .bonus__title= i.title
+                                        .bonus__txt= i.txt
+
+
+        .second__rates.rates
+            +rates()
+        .second__feed.feed
+            +feed()

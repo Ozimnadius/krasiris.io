@@ -14,16 +14,7 @@ block content
                                 +image('images/content/banner/'+(x+1)+'.jpg','banner__img')
                                 h2.banner__title= i
                     .banner__pag.swiper-pagination
-                .banner__bottom
-                    a(href='/').banner__link.btn Актуально
-                    .banner__btns
-                        a(href='tel:+7(391)200-80-30').banner__tel.btn
-                            .banner__tel-content
-                                .banner__tel-title регистратура:
-                                .banner__tel-tel
-                                    .fa.fa-phone
-                                    | +7 (391) 200-80-30
-                        a(href='#').btn.banner__call заказать звонок
+                +bannetBottom()
         section.index__about.about
             .container
                 .row
@@ -192,92 +183,10 @@ block content
                                 each i in questions
                                     a(href='/').questions__item= i
                             a(href='/').btn.questions__link Все вопросы  и ответы...
-        section.index__rates.rates
-            .container
-                h2.rates__title Лучшая клиника Красноярска по мнению независимых агентств
-                .rates__sub Центр “Ирис”, качество проверенное временем. 21 год мы с вами, чтобы вы могли видеть.
-                .rates__list
-                    .rates__col
-                        .rates__name Независимые рейтинги
-                    .rates__col
-                        a(href='/').rate
-                            span.rate__img
-                                +image('images/content/rates/1.png','rate__img-img')
-                            span.rate__title Рейтинг
-                            span.rate__rate 4,7 из 5
-                    .rates__col
-                        a(href='/').rate
-                            span.rate__img
-                                +image('images/content/rates/2.png','rate__img-img')
-                            span.rate__title Рейтинг
-                            span.rate__stars
-                                +icon('star','rate__star rate__star_active')
-                                +icon('star','rate__star rate__star_active')
-                                +icon('star','rate__star rate__star_active')
-                                +icon('star','rate__star rate__star_active')
-                                +icon('star','rate__star rate__star')
-                            span.rate__sub 1 место из 6 в Краснорске
-                            span.rate__link 31 отзыв
-                    .rates__col
-                        a(href='/').rate
-                            span.rate__img
-                                +image('images/content/rates/3.png','rate__img-img')
-                            span.rate__title Рейтинг
-                            span.rate__rate 4,9 из 5
-                    .rates__col
-                        a(href='/').rate
-                            span.rate__img
-                                +image('images/content/rates/4.png','rate__img-img')
-                            span.rate__title Рейтинг
-                            span.rate__rate 5 из 5
-                    .rates__col
-                        a(href='/').rate
-                            span.rate__img
-                                +image('images/content/rates/5.png','rate__img-img')
-                            span.rate__title Рейтинг
-                            span.rate__rate 4,8 из 5
-                .rates__bottom
-                    .rates__item
-                        .rates__txt Оценка центра “Ирис” пациентами:
-                        .rates__val 4.9/5 (499 оценок)
-                    .rates__item
-                        .rates__txt Оцените нашу работу:
-                        .rates__stars
-                            +icon('star','rates__star rates__star_active')
-                            +icon('star','rates__star rates__star_active')
-                            +icon('star','rates__star rates__star_active')
-                            +icon('star','rates__star rates__star_active')
-                            +icon('star','rates__star rates__star')
-                .rates__title Доверяйте свое зрение только профессионалам
-        section.index__feed.feed
-            .container
-                form.row.feed__form
-                    .feed__left
-                        +image('images/content/feed/img.jpg','feed__img')
-                    .feed__right
-                        h2.feed__title Запись на прием
-                        .row
-                            .feed__col
-                                .feed__fields
-                                    .feed__field
-                                        input(type='text' name='name' placeholder='Имя' required=true).input
-                                    .feed__field
-                                        input(type='email' name='email' placeholder='E-mail' required=true).input
-                                    .feed__field
-                                        input(type='tel' name='tel' placeholder='Телефон' required=true).input
-                            .feed__col
-                                .feed__fields
-                                    .feed__field
-                                        textarea(name='comment' placeholder='Ваш вопрос').input.input_area
-                                    .feed__field
-                                        label.accept.feed__accept
-                                            input(type='checkbox' name='accept' checked=true).accept__input
-                                            span.accept__fake
-                                                span.accept__check
-                                                    +icon('checked','accept__check-svg')
-                                                span.accept__txt Даю согласние на обработку персональных данных
-                                    .feed__field
-                                        button(type='submit').btn.feed__submit Записаться на прием
+        section.index__rates
+                +rates()
+        section.index__feed
+                +feed()
 
 
 

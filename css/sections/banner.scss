@@ -59,7 +59,7 @@
   }
 
   &__bottom{
-    border-top: 1px solid rgba(#000000,.2);
+    //border-top: 1px solid rgba(#000000,.2);
     border-bottom: 1px solid rgba(#000000,.2);
     padding: 0 155px;
     display: flex;
@@ -71,6 +71,12 @@
     @include sm-block{
       padding: 20px;
       flex-direction: column;
+    }
+
+    &_title{
+      @include lg-block{
+        border-bottom: 1px solid rgba(#000000,.2);
+      }
     }
 
   }
@@ -85,7 +91,7 @@
   &__link{
     height: 54px;
     width: 280px;
-    @include md-block{
+    @include xlg-block{
       width: 200px;
     }
     @include sm-block{
@@ -94,11 +100,15 @@
     }
   }
 
+  &__bread{
+
+  }
+
   &__tel{
     width: 280px;
     height: 54px;
     margin-right: 20px;
-    @include md-block{
+    @include xlg-block{
       width: 200px;
     }
     @include sm-block{
@@ -120,11 +130,30 @@
   &__call{
     width: 280px;
     height: 54px;
-    @include md-block{
+    @include xlg-block{
       width: 200px;
     }
     @include sm-block{
       width: 100%;
+    }
+  }
+}
+
+.bread{display: flex;
+  align-items: center;
+  justify-content: center;
+  @include sm-block{
+    order: 1;
+    margin-top: 25px;
+  }
+
+  &__item{
+    color: #464646;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 5px;
+    &:last-child{
+      margin-right: 0;
     }
   }
 }
